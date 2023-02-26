@@ -3,16 +3,28 @@
   src: url(fonts/Norse-Bold.otf);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
 body {
   display: flex;
   margin: 0;
   font-family: sans-serif;
+  font-weight: bold;
+  background-color: white;
 }
 
 .left-side {
   background: url(images/bgd-img.jpg) no-repeat;
   background-size: cover;
-  width: 40%;
+  width: 40vw;
   height: 100vh;
 }
 
@@ -20,7 +32,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   height: 15%;
   margin-top: 25vh;
-  padding: 2%;
+  padding: 4% 0;
 }
 
 .logo-container {
@@ -39,4 +51,103 @@ body {
   font-size: 100px;
   padding: 0;
   margin: auto 0;
+}
+
+.right-side {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+.top {
+  padding: 15% 0% 3% min(8%, 60px);
+}
+
+.mid,
+.bot {
+  padding-left: min(8%, 60px);
+}
+
+.top div {
+  max-width: 80%;
+  margin-bottom: 30px;
+}
+
+.mid {
+  background-color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+}
+
+.form-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-row {
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-row div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: small;
+}
+
+input {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  border: 1px solid rgb(0, 81, 255);
+  box-shadow: 2px 2px 5px 2px lightgrey;
+}
+
+button {
+  background-color: #596d48;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 40%;
+  max-width: 250px;
+  min-width: 150px;
+  font-weight: bold;
+  font-size: large;
+  position: absolute;
+  top: calc(100% + 20px);
+}
+
+p {
+  font-size: x-large;
+}
+
+.have-account {
+  font-size: medium;
+  font-weight: normal;
+  margin-top: 80px;
+}
+
+a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: bold;
 }
